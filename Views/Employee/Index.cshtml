@@ -1,0 +1,33 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+@model List<TaskManager.Models.Employee>
+@{
+}
+
+<h1> Employees</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Action</th>
+            <th></th>
+        </tr>
+        
+    </thead>
+    <tbody>
+        @foreach (var employee in Model)
+        {
+            <tr>
+                <td>@employee.EmpId </td>
+                <td>@employee.EmpName </td>
+                <td><a href="Employee/View/@employee.EmpId">Edit</a></td>
+               <td><a asp-action="delete" asp-controller="Employee" asp-route-EmpId="@employee.EmpId">Delete</a></td>
+            </tr>
+
+        }
+         
+    </tbody>
+</table>

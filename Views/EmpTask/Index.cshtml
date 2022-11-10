@@ -1,0 +1,34 @@
+﻿@model List<TaskManager.Models.EmpTask>
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<h1> Task List</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Assigned Employee</th>
+            <th>Action</th>
+            <th></th>
+        </tr>
+
+    </thead>
+    <tbody>
+        @foreach (var task in Model)
+        {
+            <tr>
+                <td>@task.TskId </td>
+                <td>@task.TskName </td>
+                <td>@task.Employee.EmpName </td>
+                <td><a href="EmpTask/Edit/@task.TskId">Edit</a></td>
+                <td><a asp-action="delete" asp-controller="Employee" asp-route-EmpId="@task.TskId">Delete</a></td>
+            </tr>
+
+        }
+
+    </tbody>
+</table>
