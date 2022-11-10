@@ -23,11 +23,8 @@
             <tr>
                 <td>@employee.EmpId </td>
                 <td>@employee.EmpName </td>
-                <td><a href="Employee/View/@employee.EmpId">Edit</a></td>
-               <td><a asp-action="delete" asp-controller="Employee" asp-route-EmpId="@employee.EmpId">Delete</a></td>
+                <td><a href="Employee/View/@employee.EmpId">Edit/Delete</a></td>             
             </tr>
-
-        }
-         
+        }     
     </tbody>
 </table>

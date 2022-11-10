@@ -24,11 +24,8 @@
                 <td>@task.TskId </td>
                 <td>@task.TskName </td>
                 <td>@task.Employee.EmpName </td>
-                <td><a href="EmpTask/Edit/@task.TskId">Edit</a></td>
-                <td><a asp-action="delete" asp-controller="Employee" asp-route-EmpId="@task.TskId">Delete</a></td>
+                <td><a href="EmpTask/Edit/@task.TskId">Edit/Delete</a></td>
             </tr>
-
         }
-
     </tbody>
 </table>
